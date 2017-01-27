@@ -37,7 +37,6 @@ if (system.args.length !== 2 || url[url.length - 1] === '/') {
 
         if (status === 'success') {
           response.statusCode = 200;
-          response.setHeader('Content-Type', 'text/html');
           response.setHeader('Connection', 'close');
           response.setHeader('Cache-Control', 'private, no-cache, no-store, must-revalidate');
           response.write(page.content);
